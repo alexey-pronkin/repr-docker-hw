@@ -1,3 +1,3 @@
 #!/bin/bash
-cd code && python IMBD.py;
+python IMDB.py;
 cd ../latex && pdflatex paper.tex && cp paper.pdf ../results/;

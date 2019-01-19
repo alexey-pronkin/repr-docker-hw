@@ -16,12 +16,13 @@ RUN pip install numpy scipy matplotlib sklearn lightgbm pandas jupyter tqdm
 ADD data ./data
 ADD latex ./latex
 ADD run.sh ./
+ADD IMDB.py ./
 
 # Make run.sh executable
 RUN chmod +x run.sh
 
 # /example/results contents will be shared with the host
 # if -v option used with "docker run" command
-VOLUME /example/results
+VOLUME /results
 
 CMD ./run.sh
